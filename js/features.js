@@ -30,7 +30,7 @@ function init(){
       // от 0 (весь мир) до 19.
       zoom: 17
   });
-  //coordinates: [59.938631, 30.323055
+  //coordinates: [59.938631, 30.323055]
   myPlacemark = new ymaps.Placemark(
     [59.938750, 30.323155]
     , {
@@ -55,7 +55,7 @@ function init(){
 
 let templateItems = document.querySelectorAll(".templates-item");
 document.addEventListener("focusin", onFocusTemplate);
-document.addEventListener("focusout",onFocusoutTemplate);
+document.addEventListener("focusout", onFocusoutTemplate);
 
 
 function onFocusTemplate(evt){
@@ -79,7 +79,7 @@ function onFocusTemplate(evt){
       }
     }
   }
-  // Если сфокусированный элемент не пренадлежит ни одной карточке,
+  // Если сфокусированный элемент не принадлежит ни одной карточке,
   // то ищем карточку с показанным ховером (если такая есть) и скрываем ховер
   let forClear = this.querySelector(".templates-item-hover.hover-showed");
   if (forClear) {
@@ -87,7 +87,7 @@ function onFocusTemplate(evt){
   }
 };
 
-//Одрабатка события потери фокуса необходима на случай, когда ссылка в ховере
+//Обрабатка события потери фокуса необходима на случай, когда ссылка в ховере
 // потеряла фокус ввода, но при этом ни какой другой элемент страницы фокус ввода не получил
 function onFocusoutTemplate(){
   setTimeout(delayFocusoutHandler,100);
